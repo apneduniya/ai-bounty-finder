@@ -3,12 +3,9 @@ import { openai } from "@ai-sdk/openai";
 import { streamText, type CoreMessage } from "ai";
 import { App, VercelAIToolkit } from "vity-toolkit";
 import { configDotenv } from "dotenv";
-import { validateEnvironmentFunction } from "./utils/validateEnv";
 
 
 configDotenv();
-validateEnvironmentFunction();
-
 
 const toolKit = new VercelAIToolkit();
 const messages: CoreMessage[] = []
